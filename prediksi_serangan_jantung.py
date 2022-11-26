@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 
-predik = pickle.load(open('heart-model.sav', 'rb'))
+prediksi = pickle.load(open('heart-model.sav', 'rb'))
 
 st.title ('Skrining serangan Jantung Menggunakan SVM')
 
@@ -23,7 +23,7 @@ Thallium= st.text_input('Thalium')
 Heart_Diag = ''
 
 if st.button('Test serangan janutng'):
-    heart_predi = predik.predict([[Age, Sex, ChestPainType, CP, Cholestrol, FBSOper, Restecg, Thalach, ExerciseAngina, Depression, SlopeOfSt, Caa, Thallium]])
+    heart_predi = prediksi.predict([[Age, Sex, ChestPainType, CP, Cholestrol, FBSOper, Restecg, Thalach, ExerciseAngina, Depression, SlopeOfSt, Caa, Thallium]])
 
     if(heart_predi[0] == 1):
         Heart_Diag = 'Faktor resiko serangan jantung'
