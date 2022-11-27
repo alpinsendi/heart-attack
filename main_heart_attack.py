@@ -5,7 +5,7 @@ prediksi = pickle.load(open('model-heart-attack.sav', 'rb'))
 
 st.title ('Skrining serangan Jantung Menggunakan SVM')
 
-st.text('FORMAT ANGKA YANG BISA DIMASUKAN....!!!!')
+st.text('HANYA FORMAT ANGKA YANG BISA DIOLAH...!!!!')
 
 Age= st.text_input('Input Age')
 Sex= st.text_input('Input Gender Male = 1/ famale = 0')
