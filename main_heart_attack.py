@@ -25,7 +25,7 @@ Heart_Diag = ''
 if st.button('Test serangan jantung'):
     heart_predi = prediksi.predict([[Age, Sex, ChestPainType, CP, Cholestrol, FBSOper, Restecg, Thalach, ExerciseAngina, Depression, SlopeOfSt, Caa, Thallium]])
 
-    if(heart_predi[0] == 0):
+    if(heart_predi[0] == 1):
         Heart_Diag = 'Faktor resiko serangan jantung'
     else : 
         Heart_Diag = 'Faktor resiko tidak terkena serangan jantung'
